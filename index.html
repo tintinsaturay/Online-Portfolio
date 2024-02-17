@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/dlllogo.jpg" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+        </nav>
+        <div class="heaer-text">
+            <p>Web Developer</p>
+            <h1>Hi, im <span>Martin</span><br>Rexzander B. Saturay</h1>
+        </div>
+    </div>
+</div>
+<!------about----->
+<div class="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/tintin.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Im a student web developer and with a strong foundation in HTML, CSS and JavaScript. 
+                    My expertise lies in developing aesthetically appealing and responsive  interfaces that captivate users on various devices. 
+                    In addition, my proficiency with a variety of frameworks and libraries, including Angular, Vue and React.js, allows me to create dynamic and feature rich web solutions</p>
+                <div class="tab-title">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experiences')">Experience</p>
+                    <p class="tab-links" onclick="opentab('educations')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI UX</span><br>Designing Web/App Interfaces</li>
+                        <li><span>Web Development</span><br>Web App Development</li>
+                        <li><span>App Development</span><br>Building Andriod/IOS apps</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experiences">
+                    <ul>
+                        <li><span>Pet Groomer</span><br>VFC Pet Accessories And Grooming</li>
+                        <li><span>Waiter</span><br>Symon Resto Bar</li>
+                        <li><span>Bagger</span><br>Super Value Corporation</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="educations">
+                    <ul>
+                        <li><span>College</span><br>Dalubhasaan Ng Lungsod ng Lucena</li>
+                        <li><span>Secondary Senior Highschool</span><br>St. Augustine School of Nursing</li>
+                        <li><span>Secondary Junior Highschool</span><br>Quezon National Highschool</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!------------servicess-------->
+
+<div id="project">
+    <div class="container">
+        <h1 class="sub-title"> My Project</h1>
+        <div class="project-list">
+            <div>
+                <h2>Calculator</h2>
+                <a href="#">Click Here</a>
+            </div>
+            <div>
+                <h2>Color Changer</h2>
+                <a href="#">Click Here</a>
+            </div>
+            <div>
+                <h2>To Do List</h2>
+                <a href="#">Click Here</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+        
+
+
+</script>
+
+
+
+
+</body>
+</html>
